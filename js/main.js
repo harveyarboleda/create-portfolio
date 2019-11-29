@@ -70,7 +70,7 @@ $(document).ready(function() {
 	});
 
 	$('.panel-heading a').click(function() {
-		$(this).parent('.panel-heading').siblings('.panel-body').fadeIn();
+		$(this).parent('.panel-heading').siblings('.panel-body').slideToggle();
 
 		if($(this).find('i.fas').attr('class') == "fas fa-plus-square") {
 			$(this).find('i.fas').attr("class", "fas fa-minus-square");
