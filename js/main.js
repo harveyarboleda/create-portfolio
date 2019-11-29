@@ -54,17 +54,17 @@ $(document).ready(function() {
 	$('.three').hide();
 
 	$('a.down').click(function() {
-		$('.one').slideToggle('slow', function() {
+		$('.one').fadeIn('slow', function() {
 			$(this).remove();
 		});
-		$('.two').delay(200).slideToggle().delay(1000).slideToggle('slow', function() {
+		$('.two').delay(200).fadeIn().delay(1000).fadeIn('slow', function() {
 			$(this).remove();
 		});
-		$('.three').delay(1500).slideToggle();
+		$('.three').delay(1500).fadeIn();
 	});
 
 	$('.panel-heading a').click(function() {
-		$(this).parent('.panel-heading').siblings('.panel-body').slideToggle();
+		$(this).parent('.panel-heading').siblings('.panel-body').fadeIn();
 
 		if($(this).find('i.fas').attr('class') == "fas fa-plus-square") {
 			$(this).find('i.fas').attr("class", "fas fa-minus-square");
@@ -105,7 +105,7 @@ $(document).ready(function() {
 			$('#view section.you').after(add1());
 			$('#view2 section.you').after(add2());
 
-			$('.putPortfolio').slideToggle('slow', function() {
+			$('.putPortfolio').fadeIn('slow', function() {
 				$(this).remove();
 			});
 			$('#view #displays-portfolio').html("");
@@ -130,7 +130,7 @@ $(document).ready(function() {
 				warning("danger", "Please put title!", "putTitle");
 			}
 		} else {
-			$('.putTitle').slideToggle('slow', function() {
+			$('.putTitle').fadeIn('slow', function() {
 				$(this).remove();
 			});
 			for(var s = 0; s < 2; s++) {
@@ -149,7 +149,7 @@ $(document).ready(function() {
 				warning("danger", "Please put description!", "putDescription");
 			}
 		} else {
-			$('.putDescription').slideToggle('slow', function() {
+			$('.putDescription').fadeIn('slow', function() {
 				$(this).remove();
 			});
 			var replaced = $("textarea#indexdothtml").text().replace(description,$('input[name=description]').val());
@@ -165,7 +165,7 @@ $(document).ready(function() {
 				warning("danger", "Please put keywords!", "putKeywords");
 			}
 		} else {
-			$('.putKeywords').slideToggle('slow', function() {
+			$('.putKeywords').fadeIn('slow', function() {
 				$(this).remove();
 			});
 			var replaced = $("textarea#indexdothtml").text().replace(keywords,$('input[name=keywords]').val());
@@ -182,7 +182,7 @@ $(document).ready(function() {
 				warning("danger", "Please put author!", "putAuthor");
 			}
 		} else {
-			$('.putAuthor').slideToggle('slow', function() {
+			$('.putAuthor').fadeIn('slow', function() {
 				$(this).remove();
 			});
 			var replaced = $("textarea#indexdothtml").text().replace(author,$('input[name=author]').val());
@@ -201,7 +201,7 @@ $(document).ready(function() {
 				warning("danger", "Please put name!", "putName");
 			}
 		} else {
-			$('.putName').slideToggle('slow', function() {
+			$('.putName').fadeIn('slow', function() {
 				$(this).remove();
 			});
 			$('span.name').text($('input[name=full_name]').val());
@@ -230,7 +230,7 @@ $(document).ready(function() {
 				warning("danger", "Please put position!", "putPosition");
 			}
 		} else {
-			$('.putPosition').slideToggle('slow', function() {
+			$('.putPosition').fadeIn('slow', function() {
 				$(this).remove();
 			});
 			$('span.position').text("");
@@ -264,7 +264,7 @@ function warning(alert, text, type) {
 	if($('.alerts').hasClass('.'+type)) {
 		
 	} else {
-		$('.alerts').prepend(x).hide().slideToggle(1000);
+		$('.alerts').prepend(x).hide().fadeIn(1000);
 	}
 }
 
