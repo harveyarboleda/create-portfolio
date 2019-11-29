@@ -279,7 +279,7 @@ function addWork(title) {
 		x = x + '<div style="padding: 10px;">';
 			x = x + '<img src="img/works.png">';
 			x = x + '<span class="works-title">'+title+'</div>';
-			x = x + '<span class="works-desc"></div>';
+			x = x + '<span class="works-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet tincidunt enim. Aliquam tincidunt blandit congue. Nullam bibendum nec tortor id hendrerit. Nam ac cursus sapien. Sed quis dictum felis. Praesent vestibulum pulvinar nibh scelerisque convallis.</div>';
 		x = x + '</div>';
 	x = x + '</div>';
 	return x;
@@ -290,7 +290,7 @@ function addWork2(title) {
 		x = x + '<div style="padding: 10px;">';
 			x = x + '<img src="img/works.png">';
 			x = x + '<span class="works-title">'+title+'</div>';
-			x = x + '<span class="works-desc"></div>';
+			x = x + '<span class="works-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet tincidunt enim. Aliquam tincidunt blandit congue. Nullam bibendum nec tortor id hendrerit. Nam ac cursus sapien. Sed quis dictum felis. Praesent vestibulum pulvinar nibh scelerisque convallis.</div>';
 		x = x + '</div>';
 	x = x + '</div>';
 	return x;
@@ -299,7 +299,7 @@ function addWork2(title) {
 function add1() {
 	var x = '<section class="portfolio">';
 		x = x +'<div class="container">';
-			x = x + '<span class="title">Portfolio</span>';
+			x = x + '<span class="title">Works</span>';
 			x = x + '<div id="displays-portfolio">';
 			x = x + '</div>';
 			x = x + '<div class="clearfix"></div>';
@@ -311,7 +311,7 @@ function add1() {
 function add2() {
 	var x = '<section class="portfolio">';
 		x = x +'<div class="container-fluid">';
-			x = x + '<span class="title">Portfolio</span>';
+			x = x + '<span class="title">Works</span>';
 			x = x + '<div id="displays-portfolio">';
 			x = x + '</div>';
 			x = x + '<div class="clearfix"></div>';
