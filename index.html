@@ -14,12 +14,15 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+		<link rel="stylesheet" href="https://www.jquery-az.com/boots/css/bootstrap-colorpicker/bootstrap-colorpicker.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script src="js/main.js"></script>
+		<script src="https://www.jquery-az.com/boots/js/bootstrap-colorpicker/bootstrap-colorpicker.js"></script>
 		<script>
 		angular.module('portfolio', []).controller('controller',['$scope', function($scope) {
 			$scope.put = {
@@ -75,6 +78,83 @@
 		</div>
 		<div class="container three" style="padding-top: 30px;">
 			<div class="col-lg-4">
+				<div class="panel panel-harveyarboleda slide">
+					<div class="panel-heading">
+						Theme (Under Maintenance)
+						<a class="pull-right" style="color: white;">
+							<i class="fas fa-plus-square"></i>
+						</a>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="control-label">Navigation Bar</label>
+							<div class="input-group colorpicker-component" id="color-picker-component">
+								<input ng-model="color" type="text" class="color form-control" placeholder="#2c3e50" autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="control-label">Header Background</label>
+							<div class="input-group colorpicker-component" id="color-picker-component2">
+								<input ng-model="color2" type="text" class="color form-control" placeholder="#2c3e50" autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="control-label">Works Background</label>
+							<div class="input-group colorpicker-component" id="color-picker-component3">
+								<input ng-model="color3" type="text" class="color2 form-control" placeholder="#2c3e50"  autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="control-label">Contact Us Background</label>
+							<div class="input-group colorpicker-component" id="color-picker-component4">
+								<input ng-model="color4" type="text" class="color3 form-control" placeholder="#2c3e50"  autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="control-label">Footer Background</label>
+							<div class="input-group colorpicker-component" id="color-picker-component5">
+								<input ng-model="color5" type="text" class="color4 form-control" placeholder="#2c3e50"  autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<script>
+						$(function () {
+							$('input.color').val('#2c3e50');
+							$('input.color2').val('#39237d');
+							$('input.color3').val('#ffffff');
+							$('input.color4').val('#39237d');
+							$('input.color5').val('#ffffff');
+							$('#color-picker-component').colorpicker();
+							$('#color-picker-component2').colorpicker();
+							$('#color-picker-component3').colorpicker();
+							$('#color-picker-component4').colorpicker();
+							$('#color-picker-component5').colorpicker();
+						});
+					</script>
+				</div>
 				<div class="panel panel-harveyarboleda slide">
 					<div class="panel-heading">
 						Website Settings
@@ -379,7 +459,7 @@
 		</section>
 					</div>
 					<div class="panel-footer">
-						<label>index.html with FontAwesome v5.11.2, jQuery v1.11.1 and Bootstrap v3.3.7</label><br/>
+						<label>index.html with FontAwesome v5.11.2 JS, jQuery v1.11.1 JS and Bootstrap v3.3.7 JS</label><br/>
 
 
 						<textarea id="indexdothtml" class="form-control" onclick="this.focus();this.select()" readonly="readonly" style="height: 200px;" autocomplete="off">
@@ -388,7 +468,7 @@
 
 
 						<hr/>
-						<label>css/style.css</label><br/>
+						<label>css/style.css with Bootstrap v3.3.7 CSS</label><br/>
 						<textarea id="styledotcss" class="form-control" onclick="this.focus();this.select()" readonly="readonly" style="height: 200px;">
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
 
