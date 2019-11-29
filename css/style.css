@@ -1,0 +1,83 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+
+.panel, .panel-heading, .panel-body, .panel-footer, input, button, .input-group-addon {
+	border-radius: 0px!important;
+}
+
+.panel-harveyarboleda {
+    border-color: #736bfe;
+}
+
+.panel-harveyarboleda > .panel-heading {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 20px;
+    color: #fff;
+    background-color: #736bfe;
+    border-color: #514bb7;
+}
+
+.panel-harveyarboleda > .panel-heading a {
+	cursor: pointer;
+}
+
+.form-group {
+	margin-bottom: 0px;
+}
+
+.introduction {
+	min-height: 100vh;
+	padding-top: 10vh;
+	padding-bottom: 20px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.introduction .introduction-title {
+	font-family: 'Lato', sans-serif;
+	font-size: 90px;
+	display: block;
+}
+
+.introduction .introduction-desc {
+	display: block;
+}
+
+.label {
+	margin-right: 5px;
+}
+
+a.down {
+	color: #736bfe;
+	font-size: 29px;
+}
+
+.loading {
+	margin: 0 auto;
+	text-align: center;
+	min-height: 100vh;
+	padding-top: 20vh;
+	padding-bottom: 20vh;
+}
+
+.loading-desc {
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #736bfe;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #514bb7;
+}

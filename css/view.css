@@ -1,0 +1,147 @@
+.navbar-default {
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	border-radius: 0px;
+	background-color: #2c3e50;
+	border-color: #2c3e50;
+	color: #f1f4f9;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+}
+
+.navbar-default .navbar-brand {
+	color: #f1f4f9;
+}
+
+.navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand:hover {
+	color: #FFF;
+	text-shadow: 0 0 3px #FFF;
+	transition: 0.5s;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a:hover {
+	color: #FFF;
+	text-shadow: 0 0 3px #FFF;
+	transition: 0.5s;
+	background: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #ddd;
+}
+
+.navbar-default .navbar-nav > li > a:focus, 
+.navbar-default .navbar-nav > li > a:hover {
+	color: #FFF;
+	text-shadow: 0 0 3px #FFF;
+	transition: 0.5s;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: #ddd;
+    transition: 0.5s;
+}
+
+section.you {
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #39237d;
+}
+
+section.you span.name {
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	font-size: 35px;
+	color: #FFF;
+	text-transform: uppercase;
+	display: block;
+	margin-top: 15px;
+}
+
+section.you span.position {
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: uppercase;
+	display: block;
+}
+
+section.portfolio {
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #FFF;
+}
+
+section.portfolio span.title {
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	display: block;
+}
+
+section.portfolio #displays-portfolio div {
+
+}
+
+section.portfolio img {
+	width: 100%;
+}
+
+section.portfolio span.works-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #000;
+    display: block;
+    margin-top: 10px;
+}
+
+section.contactus {
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #39237d;
+	color: #FFF;
+}
+section.contactus div {
+	text-align: center;
+	word-break: break-all;
+}
+
+
+section.contactus span.title {
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	display: block;
+	color: #FFF;
+}
+
+section.contactus i {
+	display: block;
+	font-size: 40px;
+	margin-bottom: 20px;
+	color: #FFF;
+}
+
+section.footer {
+	text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #fff;
+    color: #000;
+}
