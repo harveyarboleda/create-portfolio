@@ -33,7 +33,7 @@ $(document).ready(function() {
 		$('textarea#indexdothtml').val($('textarea.front').val() + a + $('textarea.end').val());
 	});
 	var txt = $("textarea[name=works]");
-	txt.val("Chatbox\n\nDRRMO\nMini-Facebook");
+	txt.val("Chatbox\nDRRMO\nMini-Facebook");
 	
 	//$('textarea[name=works]').val("Chatbox");
 
