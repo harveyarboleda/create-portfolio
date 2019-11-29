@@ -32,14 +32,20 @@ $(document).ready(function() {
 		var a = $('#view').html();
 		$('textarea#indexdothtml').val($('textarea.front').val() + a + $('textarea.end').val());
 	});
-
-	$('textarea[name=works]').val("Chatbox");
+	var txt = $("textarea[name=works]");
+	txt.val("Chatbox\n\nDRRMO\nMini-Facebook");
+	
+	//$('textarea[name=works]').val("Chatbox");
 
 	$('#view2 section.you').after(add2());
 	$('#view2 #displays-portfolio').append(addWork2("Chatbox"));
+	$('#view2 #displays-portfolio').append(addWork2("DRRMO"));
+	$('#view2 #displays-portfolio').append(addWork2("Mini-Facebook"));
 
 	$('#view section.you').after(add1());
 	$('#view #displays-portfolio').append(addWork("Chatbox"));
+	$('#view #displays-portfolio').append(addWork("DRRMO"));
+	$('#view #displays-portfolio').append(addWork("Mini-Facebook"));
 
 	var a = $('#view').html();
 	$('textarea#indexdothtml').val($('textarea.front').val() + a + $('textarea.end').val());
