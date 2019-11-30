@@ -45,7 +45,8 @@
 				location: '839 P. Paredes, Sampaloc, Manila, 1015 Metro Manila',
 				emailaddress: '201811816@fit.edu.ph',
 				phone: 'XXX-XXX-XXX',
-				works: 'Chatbox' 
+				works: 'Chatbox',
+				mypicture: 'img/user.png'
 			};
 		}]);
 		</script>
@@ -88,7 +89,7 @@
 			<div class="col-lg-4">
 				<div class="panel panel-harveyarboleda slide">
 					<div class="panel-heading">
-						Theme Option
+						Theme Options
 						<a class="pull-right" style="color: white;">
 							<i class="fas fa-plus-square"></i>
 						</a>
@@ -368,10 +369,42 @@
 
 				<div class="panel panel-harveyarboleda slide">
 					<div class="panel-heading">
-						Information
+						Your Information
 						<a class="pull-right" style="color: white;">
 							<i class="fas fa-plus-square"></i>
 						</a>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="control-label">Personal Picture <label class="label label-danger">(Must "133x133" or "Square Size")</label></label>
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="fas fa-image"></i>
+								</span>
+								<input type="file" class="form-control" onchange="loadFile(this);">
+								<span class="input-group-addon removeImg" style="cursor: pointer;">
+									<i class="fas fa-trash"></i>
+								</span>
+								<script>
+									function loadFile(input) {
+										if (input.files && input.files[0]) {
+											var reader = new FileReader();
+											reader.onload = function (e) {
+												 $('.img-circle').attr('src', e.target.result);
+											}
+											reader.readAsDataURL(input.files[0]);
+										}
+									}
+									$(document).ready(function() {
+										$('span.removeImg').click(function() {
+											$('.img-circle').attr('src', "img/user.png");
+										});
+									});
+								</script>
+								<input ng-model="put.mypicture" type="text" name="mypicture" style="display:none;">
+								
+							</div>
+						</div>
 					</div>
 					<div class="panel-body">
 						<div class="form-group">
@@ -495,7 +528,7 @@
 		</nav>
 		<section class="you">
 			<div class="container">
-							<img src="img/user.png" class="img-responsive img-circle" style="width: 20%;margin: 0 auto;">
+							<img src="{{put.mypicture}}" class="img-responsive img-circle" style="width: 20%;margin: 0 auto;">
 							<span class="name">
 								{{put.full_name}}
 							</span>
@@ -642,7 +675,7 @@
 		</nav>
 		<section class="you">
 			<div class="container-fluid">
-							<img src="img/user.png" class="img-responsive img-circle" style="width: 20%;margin: 0 auto;">
+							<img src="{{put.mypicture}}" class="img-responsive img-circle" style="width: 20%;margin: 0 auto;">
 							<span class="name">
 								{{put.full_name}}
 							</span>
