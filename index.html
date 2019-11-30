@@ -80,7 +80,7 @@
 			<div class="col-lg-4">
 				<div class="panel panel-harveyarboleda slide">
 					<div class="panel-heading">
-						Theme (Under Maintenance)
+						Theme
 						<a class="pull-right" style="color: white;">
 							<i class="fas fa-plus-square"></i>
 						</a>
@@ -100,7 +100,7 @@
 						<div class="form-group">
 							<label class="control-label">Header Background</label>
 							<div class="input-group colorpicker-component" id="color-picker-component2">
-								<input ng-model="color2" type="text" class="color form-control" placeholder="#2c3e50" autocomplete="false" />
+								<input ng-model="color2" type="text" class="color2 form-control" placeholder="#39237d" autocomplete="false" />
 								<span class="input-group-addon">
 									<i></i>
 								</span>
@@ -111,7 +111,7 @@
 						<div class="form-group">
 							<label class="control-label">Works Background</label>
 							<div class="input-group colorpicker-component" id="color-picker-component3">
-								<input ng-model="color3" type="text" class="color2 form-control" placeholder="#2c3e50"  autocomplete="false" />
+								<input ng-model="color3" type="text" class="color3 form-control" placeholder="#ffffff"  autocomplete="false" />
 								<span class="input-group-addon">
 									<i></i>
 								</span>
@@ -122,7 +122,7 @@
 						<div class="form-group">
 							<label class="control-label">Contact Us Background</label>
 							<div class="input-group colorpicker-component" id="color-picker-component4">
-								<input ng-model="color4" type="text" class="color3 form-control" placeholder="#2c3e50"  autocomplete="false" />
+								<input ng-model="color4" type="text" class="color4 form-control" placeholder="#39237d"  autocomplete="false" />
 								<span class="input-group-addon">
 									<i></i>
 								</span>
@@ -133,7 +133,7 @@
 						<div class="form-group">
 							<label class="control-label">Footer Background</label>
 							<div class="input-group colorpicker-component" id="color-picker-component5">
-								<input ng-model="color5" type="text" class="color4 form-control" placeholder="#2c3e50"  autocomplete="false" />
+								<input ng-model="color5" type="text" class="color5 form-control" placeholder="#ffffff"  autocomplete="false" />
 								<span class="input-group-addon">
 									<i></i>
 								</span>
@@ -339,6 +339,13 @@
 						</textarea>
 					</div>
 					<div id="view2" class="panel-body" style="height: 500px; overflow: auto;">
+						<style>
+							.navbar-default{ background:{{color}}!important; }
+							section.you{ background:{{color2}}!important; }
+							section.portfolio{ background: {{color3}}!important; }
+							section.contactus{ background: {{color4}}!important; }
+							section.footer{ background: {{color5}}!important; }
+						</style>
 		<nav class="navbar navbar-default">
 							<div class="container-fluid">
 								<div class="navbar-header">
@@ -477,7 +484,7 @@
 	font-weight: bold;
 	border-radius: 0px;
 	background-color: #2c3e50;
-	border-color: #2c3e50;
+	border-color: {{color}};
 	color: #f1f4f9;
 	text-transform: uppercase;
 	margin-bottom: 0px;
@@ -525,7 +532,7 @@ section.you {
 	margin: 0 auto;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background: #39237d;
+	background: {{color2}};
 }
 
 section.you span.name {
@@ -551,7 +558,7 @@ section.portfolio {
 	margin: 0 auto;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background: #FFF;
+	background: {{color3}};
 }
 
 section.portfolio span.title {
@@ -585,7 +592,7 @@ section.contactus {
 	margin: 0 auto;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background: #39237d;
+	background: {{color4}};
 	color: #FFF;
 }
 section.contactus div {
@@ -616,7 +623,7 @@ section.footer {
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
-    background: #fff;
+    background: {{color5}};
     color: #000;
 }
 
