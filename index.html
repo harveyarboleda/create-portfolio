@@ -93,15 +93,7 @@
 							<i class="fas fa-plus-square"></i>
 						</a>
 					</div>
-					<div class="panel-body">
-						<script>
-							$(document).ready(function() {
-
-							});
-						</script>
-						<label>Navigation fixed?</label><br/>
-						<input type="checkbox" ng-model="nav_fixed" value="navbar-fixed-top"> <label class="status"></label>
-					</div>
+					
 					<div class="panel-body">
 						<div class="form-group" style="margin-bottom: 10px;">
 							<label class="control-label">Navigation Bar</label>
@@ -175,7 +167,7 @@
 						<hr style="margin-bottom: 0px;"/>
 					</div>
 					<div class="panel-body">
-						<div class="form-group">
+						<div class="form-group" style="margin-bottom: 10px;">
 							<label class="control-label">Works Background</label>
 							<div class="input-group colorpicker-component" id="color-picker-component3">
 								<input ng-model="color3" type="text" class="color3 form-control" placeholder="#ffffff"  autocomplete="false" />
@@ -184,6 +176,37 @@
 								</span>
 							</div>
 						</div>
+						<div class="form-group" style="margin-bottom: 10px;">
+							<label class="control-label">Title (color)</label>
+							<div class="input-group colorpicker-component" id="color-picker-component11">
+								<input ng-model="work_title" type="text" class="work_title form-control" placeholder="#ffffff" autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+						<div class="col-xs-6" style="padding-left: 0px;">
+							<label class="control-label">Work Title (color)</label>
+							<div class="input-group colorpicker-component" id="color-picker-component12">
+								<input ng-model="work_work_title" type="text" class="work_work_title form-control" placeholder="#ffffff" autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+						<div class="col-xs-6" style="padding-right: 0px;">
+							
+							<label class="control-label">Work Desc. (color)</label>
+							<div class="input-group colorpicker-component" id="color-picker-component13">
+								<input ng-model="work_work_desc" type="text" class="work_work_desc form-control" placeholder="#ffffff" autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+						
+						<div class="clearfix"></div>
+						<hr style="margin-bottom: 0px;"/>
 					</div>
 					<div class="panel-body">
 						<div class="form-group">
@@ -231,6 +254,13 @@
 							$('input.header_position_color').val('#ffffff');
 							$('#color-picker-component9').colorpicker();
 							$('#color-picker-component10').colorpicker();
+
+							$('input.work_title').val('#000000');
+							$('input.work_work_title').val('#000000');
+							$('input.work_work_desc').val('#000000');
+							$('#color-picker-component11').colorpicker();
+							$('#color-picker-component12').colorpicker();
+							$('#color-picker-component13').colorpicker();
 						});
 					</script>
 				</div>
@@ -511,6 +541,18 @@
 							section.you span.position {
 								color: {{header_position_color}}!important;
 							}
+
+							section.portfolio span.title {
+								color: {{work_title}}!important;
+							}
+
+							section.portfolio span.works-title {
+								color: {{work_work_title}}!important;
+							}
+
+							section.portfolio span.works-desc {
+								color: {{work_work_desc}}!important;
+							}
 						</style>
 		<nav class="navbar navbar-default">
 							<div class="container-fluid">
@@ -673,6 +715,7 @@ section.portfolio span.title {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	display: block;
+	color: {{work_title}};
 }
 
 section.portfolio #displays-portfolio div {
@@ -687,9 +730,15 @@ section.portfolio span.works-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 35px;
     text-transform: uppercase;
-    color: #000;
+    color: {{work_work_title}};
     display: block;
     margin-top: 10px;
+}
+
+section.portfolio span.works-desc {
+    color: {{work_work_desc}};
+    font-size: 12px;
+    font-style: italic;
 }
 
 section.contactus {
