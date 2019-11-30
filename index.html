@@ -209,7 +209,7 @@
 						<hr style="margin-bottom: 0px;"/>
 					</div>
 					<div class="panel-body" style="padding-top: 0;">
-						<div class="form-group">
+						<div class="form-group" style="margin-bottom: 10px;">
 							<label class="control-label">Contact Us Background</label>
 							<div class="input-group colorpicker-component" id="color-picker-component4">
 								<input ng-model="color4" type="text" class="color4 form-control" placeholder="#39237d"  autocomplete="false" />
@@ -218,12 +218,51 @@
 								</span>
 							</div>
 						</div>
+						<div class="form-group" style="margin-bottom: 10px;">
+							<label class="control-label">Contact Us Title (color)</label>
+							<div class="input-group colorpicker-component" id="color-picker-component14">
+								<input ng-model="contact_title" type="text" class="contact_title form-control" placeholder="#ffffff"  autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+						<div class="col-xs-6" style="padding-left: 0px;">
+							<label class="control-label">Contact Icon (color)</label>
+							<div class="input-group colorpicker-component" id="color-picker-component15">
+								<input ng-model="contact_icons" type="text" class="contact_icons form-control" placeholder="#ffffff" autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+						<div class="col-xs-6" style="padding-right: 0px;">
+							
+							<label class="control-label">Contact Text (color)</label>
+							<div class="input-group colorpicker-component" id="color-picker-component16">
+								<input ng-model="contact_desc" type="text" class="contact_desc form-control" placeholder="#ffffff" autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<hr style="margin-bottom: 0px;"/>
 					</div>
 					<div class="panel-body" style="padding-top: 0;">
-						<div class="form-group">
+						<div class="form-group" style="margin-bottom: 10px;">
 							<label class="control-label">Footer Background</label>
 							<div class="input-group colorpicker-component" id="color-picker-component5">
 								<input ng-model="color5" type="text" class="color5 form-control" placeholder="#ffffff"  autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Footer Text (color)</label>
+							<div class="input-group colorpicker-component" id="color-picker-component17">
+								<input ng-model="footer_text_color" type="text" class="footer_text_color form-control" placeholder="#ffffff"  autocomplete="false" />
 								<span class="input-group-addon">
 									<i></i>
 								</span>
@@ -264,10 +303,13 @@
 
 							$('input.contact_title').val('#ffffff');
 							$('input.contact_icons').val('#ffffff');
-							$('input.contact_desc').val('#fffffff');
+							$('input.contact_desc').val('#ffffff');
 							$('#color-picker-component14').colorpicker();
 							$('#color-picker-component15').colorpicker();
 							$('#color-picker-component16').colorpicker();
+
+							$('input.footer_text_color').val('#000000');
+							$('#color-picker-component17').colorpicker();
 						});
 					</script>
 				</div>
@@ -468,15 +510,15 @@
 							<span class="title">Contact Us</span>
 							<div class="col-lg-4" style="padding: 10px;">
 								<i class="fas fa-map-marker-alt"></i>
-								{{put.location}}
+								<span>{{put.location}}</span>
 							</div>
 							<div class="col-lg-4" style="padding: 10px;">
 								<i class="fas fa-envelope"></i>
-								{{put.emailaddress}}
+								<span>{{put.emailaddress}}</span>
 							</div>
 							<div class="col-lg-4" style="padding: 10px;">
 								<i class="fas fa-phone"></i>
-								{{put.phone}}
+								<span>{{put.phone}}</span>
 							</div>
 							<div class="clearfix"></div>
 			</div>
@@ -540,7 +582,10 @@
 							section.you{ background:{{color2}}!important; }
 							section.portfolio{ background: {{color3}}!important; }
 							section.contactus{ background: {{color4}}!important; }
-							section.footer{ background: {{color5}}!important; }
+							section.footer { 
+								background: {{color5}}!important; 
+								color: {{footer_text_color}}!important;
+							}
 
 							section.you span.name {
 								color: {{header_name_color}}!important;
@@ -560,6 +605,16 @@
 
 							section.portfolio span.works-desc {
 								color: {{work_work_desc}}!important;
+							}
+
+							section.contactus i {
+								color: {{contact_icons}}!important;
+							}
+							section.contactus span.title {
+								color: {{contact_title}}!important;
+							}
+							section.contactus span {
+								color: {{contact_desc}}!important;
 							}
 						</style>
 		<nav class="navbar navbar-default">
@@ -602,15 +657,15 @@
 							<span class="title">Contact Us</span>
 							<div class="col-lg-4" style="padding: 10px;">
 								<i class="fas fa-map-marker-alt"></i>
-								{{put.location}}
+								<span>{{put.location}}</span>
 							</div>
 							<div class="col-lg-4" style="padding: 10px;">
 								<i class="fas fa-envelope"></i>
-								{{put.emailaddress}}
+								<span>{{put.emailaddress}}</span>
 							</div>
 							<div class="col-lg-4" style="padding: 10px;">
 								<i class="fas fa-phone"></i>
-								{{put.phone}}
+								<span>{{put.phone}}</span>
 							</div>
 							<div class="clearfix"></div>
 			</div>
@@ -771,14 +826,18 @@ section.contactus span.title {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	display: block;
-	color: #FFF;
+	color: {{contact_title}};
 }
 
 section.contactus i {
 	display: block;
 	font-size: 40px;
 	margin-bottom: 20px;
-	color: #FFF;
+	color: {{contact_icons}};
+}
+
+section.contactus span {
+	color: {{contact_desc}};
 }
 
 section.footer {
@@ -787,7 +846,7 @@ section.footer {
     padding-top: 20px;
     padding-bottom: 20px;
     background: {{color5}};
-    color: #000;
+    color: {{footer_text_color}};
 }
 
 ::-webkit-scrollbar {
