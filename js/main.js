@@ -21,9 +21,11 @@ var social_counts = 0;
 var social = [];
 var social_links = [];
 
+/**
 $(window).bind('beforeunload', function(){
   return 'Are you sure you want to leave?';
 });
+**/
 
 $(document).ready(function() {
 	
@@ -57,7 +59,7 @@ $(document).ready(function() {
 	// This website! hehe~
 	$('.slide .panel-body').hide();
 	$('.two').hide();
-	$('.three').hide();
+	$('.one').hide();
 
 	$('a.down').click(function() {
 		$('.one').fadeIn('slow', function() {
@@ -279,7 +281,7 @@ function addWork(title) {
 		x = x + '<div style="padding: 10px;">';
 			x = x + '<img src="img/works.png">';
 			x = x + '<span class="works-title">'+title+'</div>';
-			x = x + '<span class="works-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet tincidunt enim. Aliquam tincidunt blandit congue. Nullam bibendum nec tortor id hendrerit. Nam ac cursus sapien. Sed quis dictum felis. Praesent vestibulum pulvinar nibh scelerisque convallis.</div>';
+			x = x + '<span class="works-desc"></div>';
 		x = x + '</div>';
 	x = x + '</div>';
 	return x;
@@ -290,7 +292,7 @@ function addWork2(title) {
 		x = x + '<div style="padding: 10px;">';
 			x = x + '<img src="img/works.png">';
 			x = x + '<span class="works-title">'+title+'</div>';
-			x = x + '<span class="works-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet tincidunt enim. Aliquam tincidunt blandit congue. Nullam bibendum nec tortor id hendrerit. Nam ac cursus sapien. Sed quis dictum felis. Praesent vestibulum pulvinar nibh scelerisque convallis.</div>';
+			x = x + '<span class="works-desc"></div>';
 		x = x + '</div>';
 	x = x + '</div>';
 	return x;
