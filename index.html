@@ -88,10 +88,19 @@
 			<div class="col-lg-4">
 				<div class="panel panel-harveyarboleda slide">
 					<div class="panel-heading">
-						Theme
+						Theme Option
 						<a class="pull-right" style="color: white;">
 							<i class="fas fa-plus-square"></i>
 						</a>
+					</div>
+					<div class="panel-body">
+						<script>
+							$(document).ready(function() {
+
+							});
+						</script>
+						<label>Navigation fixed?</label><br/>
+						<input type="checkbox" ng-model="nav_fixed" value="navbar-fixed-top"> <label class="status"></label>
 					</div>
 					<div class="panel-body">
 						<div class="form-group" style="margin-bottom: 10px;">
@@ -381,6 +390,66 @@
 						Preview
 					</div>
 					<div style="visibility: hidden;display: none;">
+						<code id="view" type="text" style="visibility: hidden;display:none;">
+		<nav class="navbar navbar-default">
+							<div class="container">
+								<div class="navbar-header">
+									<!--
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myPortfolio">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									</button>
+									-->
+									<a class="navbar-brand">{{put.title}}</a>
+								</div>
+
+								<div class="collapse navbar-collapse" id="myPortfolio">
+									<!--
+									<ul class="nav navbar-nav navbar-right">
+										<li><a>Link</a></li>
+									</ul>
+									-->
+								</div>
+							</div>
+		</nav>
+		<section class="you">
+			<div class="container">
+							<img src="img/user.png" class="img-responsive img-circle" style="width: 20%;margin: 0 auto;">
+							<span class="name">
+								{{put.full_name}}
+							</span>
+							<span class="position">
+								{{put.position}}
+							</span>
+							<div class="clearfix"></div>
+			</div>
+		</section>
+		<section class="contactus">
+			<div class="container">
+							<span class="title">Contact Us</span>
+							<div class="col-lg-4" style="padding: 10px;">
+								<i class="fas fa-map-marker-alt"></i>
+								{{put.location}}
+							</div>
+							<div class="col-lg-4" style="padding: 10px;">
+								<i class="fas fa-envelope"></i>
+								{{put.emailaddress}}
+							</div>
+							<div class="col-lg-4" style="padding: 10px;">
+								<i class="fas fa-phone"></i>
+								{{put.phone}}
+							</div>
+							<div class="clearfix"></div>
+			</div>
+		</section>
+		<section class="footer">
+			<div class="container">
+				Copyright &copy; {{put.title}}
+			</div>
+		</section>
+					</code>
 						<textarea class="front">
 <!DOCTYPE html>
 <html>
@@ -501,66 +570,6 @@
 			</div>
 		</section>
 					</div>
-					<textarea id="view" style="visibility: hidden;display:none;">
-		<nav class="navbar navbar-default">
-							<div class="container">
-								<div class="navbar-header">
-									<!--
-									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myPortfolio">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									</button>
-									-->
-									<a class="navbar-brand">{{put.title}}</a>
-								</div>
-
-								<div class="collapse navbar-collapse" id="myPortfolio">
-									<!--
-									<ul class="nav navbar-nav navbar-right">
-										<li><a>Link</a></li>
-									</ul>
-									-->
-								</div>
-							</div>
-		</nav>
-		<section class="you">
-			<div class="container">
-							<img src="img/user.png" class="img-responsive img-circle" style="width: 20%;margin: 0 auto;">
-							<span class="name">
-								{{put.full_name}}
-							</span>
-							<span class="position">
-								{{put.position}}
-							</span>
-							<div class="clearfix"></div>
-			</div>
-		</section>
-		<section class="contactus">
-			<div class="container">
-							<span class="title">Contact Us</span>
-							<div class="col-lg-4" style="padding: 10px;">
-								<i class="fas fa-map-marker-alt"></i>
-								{{put.location}}
-							</div>
-							<div class="col-lg-4" style="padding: 10px;">
-								<i class="fas fa-envelope"></i>
-								{{put.emailaddress}}
-							</div>
-							<div class="col-lg-4" style="padding: 10px;">
-								<i class="fas fa-phone"></i>
-								{{put.phone}}
-							</div>
-							<div class="clearfix"></div>
-			</div>
-		</section>
-		<section class="footer">
-			<div class="container">
-				Copyright &copy; {{put.title}}
-			</div>
-		</section>
-					</textarea>
 					<div class="panel-footer">
 						<label>index.html with FontAwesome v5.11.2 JS, jQuery v1.11.1 JS and Bootstrap v3.3.7 JS</label><br/>
 
