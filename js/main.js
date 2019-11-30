@@ -59,7 +59,7 @@ $(document).ready(function() {
 	// This website! hehe~
 	$('.slide .panel-body').hide();
 	$('.two').hide();
-	$('.one').hide();
+	$('.three').hide();
 
 	$('a.down').click(function() {
 		$('.one').fadeIn('slow', function() {
