@@ -59,7 +59,7 @@ $(document).ready(function() {
 	// This website! hehe~
 	$('.slide .panel-body').hide();
 	$('.two').hide();
-	$('.three').hide();
+	$('.one').hide();
 
 	$('a.down').click(function() {
 		$('.one').fadeIn('slow', function() {
@@ -281,7 +281,7 @@ function addWork(title) {
 		x = x + '<div style="padding: 10px;">';
 			x = x + '<img src="img/works.png">';
 			x = x + '<span class="works-title">'+title+'</div>';
-			x = x + '<span class="works-desc"></div>';
+			x = x + '<span class="works-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae justo erat. Proin dictum, velit pulvinar cursus interdum, augue augue eleifend diam, ut fringilla diam sem a ante. Suspendisse vel mi ex. Ut ut convallis nisl, id fringilla augue. In vulputate eros in ornare volutpat.</div>';
 		x = x + '</div>';
 	x = x + '</div>';
 	return x;
@@ -292,7 +292,7 @@ function addWork2(title) {
 		x = x + '<div style="padding: 10px;">';
 			x = x + '<img src="img/works.png">';
 			x = x + '<span class="works-title">'+title+'</div>';
-			x = x + '<span class="works-desc"></div>';
+			x = x + '<span class="works-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae justo erat. Proin dictum, velit pulvinar cursus interdum, augue augue eleifend diam, ut fringilla diam sem a ante. Suspendisse vel mi ex. Ut ut convallis nisl, id fringilla augue. In vulputate eros in ornare volutpat.</div>';
 		x = x + '</div>';
 	x = x + '</div>';
 	return x;
