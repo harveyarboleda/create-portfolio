@@ -134,7 +134,7 @@
 						<hr style="margin-bottom: 0px;"/>
 					</div>
 					<div class="panel-body">
-						<div class="form-group">
+						<div class="form-group" style="margin-bottom: 10px;">
 							<label class="control-label">Header Background</label>
 							<div class="input-group colorpicker-component" id="color-picker-component2">
 								<input ng-model="color2" type="text" class="color2 form-control" placeholder="#39237d" autocomplete="false" />
@@ -143,6 +143,27 @@
 								</span>
 							</div>
 						</div>
+						<div class="col-xs-6" style="padding-left: 0px;">
+							<label class="control-label">Name (color)</label>
+							<div class="input-group colorpicker-component" id="color-picker-component9">
+								<input ng-model="header_name_color" type="text" class="header_name_color form-control" placeholder="#ffffff" autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+						<div class="col-xs-6" style="padding-right: 0px;">
+							<label class="control-label">Position (color)</label>
+							<div class="input-group colorpicker-component" id="color-picker-component10">
+								<input ng-model="header_position_color" type="text" class="header_position_color form-control" placeholder="#ffffff" autocomplete="false" />
+								<span class="input-group-addon">
+									<i></i>
+								</span>
+							</div>
+						</div>
+						
+						<div class="clearfix"></div>
+						<hr style="margin-bottom: 0px;"/>
 					</div>
 					<div class="panel-body">
 						<div class="form-group">
@@ -196,6 +217,11 @@
 							$('#color-picker-component6').colorpicker();
 							$('#color-picker-component7').colorpicker();
 							$('#color-picker-component8').colorpicker();
+
+							$('input.header_name_color').val('#ffffff');
+							$('input.header_position_color').val('#ffffff');
+							$('#color-picker-component9').colorpicker();
+							$('#color-picker-component10').colorpicker();
 						});
 					</script>
 				</div>
@@ -408,6 +434,14 @@
 							section.portfolio{ background: {{color3}}!important; }
 							section.contactus{ background: {{color4}}!important; }
 							section.footer{ background: {{color5}}!important; }
+
+							section.you span.name {
+								color: {{header_name_color}}!important;
+							}
+
+							section.you span.position {
+								color: {{header_position_color}}!important;
+							}
 						</style>
 		<nav class="navbar navbar-default">
 							<div class="container-fluid">
@@ -601,7 +635,7 @@ section.you span.name {
 	font-family: 'Lato', sans-serif;
 	font-weight: bold;
 	font-size: 35px;
-	color: #FFF;
+	color: {{header_name_color}};
 	text-transform: uppercase;
 	display: block;
 	margin-top: 15px;
@@ -610,7 +644,7 @@ section.you span.name {
 section.you span.position {
 	font-family: 'Lato', sans-serif;
 	font-weight: bold;
-	color: #FFF;
+	color: {{header_position_color}};
 	text-transform: uppercase;
 	display: block;
 }
